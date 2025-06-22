@@ -23,11 +23,13 @@ namespace ComputersAuditorium
         }
         private void LoadData()
         {
+
             using (var db = new ApplicationContext())
             {
                 var data = db.Auditoriums.ToList();
                 AuditoriumGrid.ItemsSource = data;
             }
+
         }
     }
 }
